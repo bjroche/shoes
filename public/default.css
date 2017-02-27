@@ -12,6 +12,10 @@ ul.topnav {
 ul.topnav li {float: left;}
 
 ul.topnav li a {
+    font-family: 'Open Sans', 'Helvetica-Neue',Helvetica,Arial, sans-serif;
+    font-size:16px;
+    line-height: 20px;
+    font-weight: bold;
     display: block;
     color: white;
     text-align: center;
