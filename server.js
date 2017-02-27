@@ -13,7 +13,7 @@ app.use((req, res, next) => {
   var log = `${now}: ${req.method} ${req.url}`;
 
   console.log(log);
-  fs.appendFile('server.log', log + '\n');
+  fs.appendFileSync('server.log', log + '\n');
   next();
 });
 
@@ -38,14 +38,37 @@ app.get('/', (req, res) => {
   });
 });
 
+app.get('/mens', (req, res) => {
+  res.render('mens.hbs', {
+    //pageTitle: 'About Page'
+  });
+});
+
+app.get('/ladies', (req, res) => {
+  res.render('ladies.hbs', {
+    //pageTitle: 'About Page'
+  });
+});
+
+
+app.get('/sale', (req, res) => {
+  res.render('sale.hbs', {
+    //pageTitle: 'About Page'
+  });
+});
+
+
+
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
     //pageTitle: 'About Page'
   });
 });
 
-app.get('/projects', (req, res) => {
-  res.render('projects.hbs', {
+
+
+app.get('/services', (req, res) => {
+  res.render('services.hbs', {
   //  pageTitle: 'Projectk'
   });
 });
