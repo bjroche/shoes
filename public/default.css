@@ -36,14 +36,21 @@ ul.topnav li.right {float: right;}
 
 
 p.gentxt{
-
 color:#333333;
 font-family: 'Open Sans', 'Helvetica-Neue',Helvetica,Arial, sans-serif;
 text-indent: 50px;
 padding-left:40px;
 }
 
-h2.gentxt{
+p.footTxt{
+color: #333333;
+text-align: center;
+font-family: 'Open Sans', 'Helvetica-Neue',Helvetica,Arial, sans-serif;
+}
+
+
+
+h2.hdtxt{
 color: #1a1a1a;
 font-family: 'Open Sans', 'Helvetica-Neue',Helvetica,Arial, sans-serif;
 padding-left:40px;
