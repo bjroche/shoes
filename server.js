@@ -1,13 +1,16 @@
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
-
+const lbsConstants = require('./scarpa_const');
 const port = process.env.PORT || 3000;
 var language ='en';
 var app = express();
 
+
+
 hbs.registerPartials(__dirname + '/views/partials')
 app.set('view engine', 'hbs');
+
 
 app.use((req, res, next) => {
   var now = new Date().toString();
@@ -35,12 +38,15 @@ hbs.registerHelper('screamIt', (text) => {
 app.get('/', (req, res) => {
   res.render('home.hbs', {
     //pageTitle: 'Home Page',
-    welcomeMessage: 'Welcome to the La Bella Scarpa online experience'
+    welcomeMessage: 'Welcome to La Bella Scarpa!'
+   // console.log(lbsConstants.en_welcome);
+
   });
 });
 
 app.get('/mens', (req, res) => {
   var query = req.query;
+  console.log(req.body)
 
   console.log(query);
     res.render('mens.hbs', {
