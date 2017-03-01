@@ -3,6 +3,7 @@ const hbs = require('hbs');
 const fs = require('fs');
 
 const port = process.env.PORT || 3000;
+var language ='en';
 var app = express();
 
 hbs.registerPartials(__dirname + '/views/partials')
@@ -12,8 +13,8 @@ app.use((req, res, next) => {
   var now = new Date().toString();
   var log = `${now}: ${req.method} ${req.url}`;
 
-  console.log(log);
-  fs.appendFileSync('server.log', log + '\n');
+  //console.log(log);
+  //fs.appendFileSync('server.log', log + '\n');
   next();
 });
 
@@ -39,7 +40,10 @@ app.get('/', (req, res) => {
 });
 
 app.get('/mens', (req, res) => {
-  res.render('mens.hbs', {
+  var query = req.query;
+
+  console.log(query);
+    res.render('mens.hbs', {
     //pageTitle: 'About Page'
   });
 });
