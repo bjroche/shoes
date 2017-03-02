@@ -2,9 +2,9 @@ const express = require('express');
 //const nr = require('@newrelic/beta-agent')  
 const hbs = require('hbs');
 const fs = require('fs');
-const lbsConstants = require('./scarpa_const');
+const lbsText = require('./scarpa_const.js');
 const port = process.env.PORT || 3000;
-var language ='en';
+var ourlang ='en';
 var app = express();
 
 
@@ -38,17 +38,20 @@ hbs.registerHelper('screamIt', (text) => {
 
 app.get('/', (req, res) => {
   res.render('home.hbs', {
-    //pageTitle: 'Home Page',
-    welcomeMessage: 'Welcome to La Bella Scarpa!'
-   // console.log(lbsConstants.en_welcome);
-
+    welcomeMessage: lbsText.getWelcome(ourlang),
+    homePara1: lbsText.gethomePara1(),
+    homePara2: lbsText.gethomePara2(),
+    homePara3: lbsText.gethomePara3(),
+    homePara4: lbsText.gethomePara4()
   });
 });
 
 app.get('/mens', (req, res) => {
   var query = req.query;
   console.log(req.body)
+    welcomeMessage: lbsText.getWelcome();
 
+  console.log(lbsText.welcomeMessage);
   console.log(query);
     res.render('mens.hbs', {
     //pageTitle: 'About Page'
@@ -74,6 +77,30 @@ app.get('/about', (req, res) => {
   res.render('about.hbs', {
     //pageTitle: 'About Page'
   });
+});
+
+app.get('/en', (req, res) => {
+  ourlang='en',
+  res.render('home.hbs', {
+    welcomeMessage: lbsText.getWelcome(ourlang),
+    homePara1: lbsText.gethomePara1(),
+    homePara2: lbsText.gethomePara2(),
+    homePara3: lbsText.gethomePara3(),
+    homePara4: lbsText.gethomePara4()
+  });
+
+});
+
+app.get('/it', (req, res) => {
+  ourlang='it',
+  res.render('home.hbs', {
+    welcomeMessage: lbsText.getWelcome(ourlang),
+    homePara1: lbsText.gethomePara1(),
+    homePara2: lbsText.gethomePara2(),
+    homePara3: lbsText.gethomePara3(),
+    homePara4: lbsText.gethomePara4()
+  });
+
 });
 
 
