@@ -39,10 +39,11 @@ hbs.registerHelper('screamIt', (text) => {
 app.get('/', (req, res) => {
   res.render('home.hbs', {
     welcomeMessage: lbsText.getWelcome(ourlang),
-    homePara1: lbsText.gethomePara1(),
-    homePara2: lbsText.gethomePara2(),
-    homePara3: lbsText.gethomePara3(),
-    homePara4: lbsText.gethomePara4()
+    homePara1: lbsText.gethomePara1(ourlang),
+    homePara2: lbsText.gethomePara2(ourlang),
+    homePara3: lbsText.gethomePara3(ourlang),
+    homePara4: lbsText.gethomePara4(ourlang),
+    pageLang: ourlang
   });
 });
 
@@ -83,10 +84,11 @@ app.get('/en', (req, res) => {
   ourlang='en',
   res.render('home.hbs', {
     welcomeMessage: lbsText.getWelcome(ourlang),
-    homePara1: lbsText.gethomePara1(),
-    homePara2: lbsText.gethomePara2(),
-    homePara3: lbsText.gethomePara3(),
-    homePara4: lbsText.gethomePara4()
+    homePara1: lbsText.gethomePara1(ourlang),
+    homePara2: lbsText.gethomePara2(ourlang),
+    homePara3: lbsText.gethomePara3(ourlang),
+    homePara4: lbsText.gethomePara4(ourlang),
+    pageLang: ourlang
   });
 
 });
@@ -95,10 +97,11 @@ app.get('/it', (req, res) => {
   ourlang='it',
   res.render('home.hbs', {
     welcomeMessage: lbsText.getWelcome(ourlang),
-    homePara1: lbsText.gethomePara1(),
-    homePara2: lbsText.gethomePara2(),
-    homePara3: lbsText.gethomePara3(),
-    homePara4: lbsText.gethomePara4()
+    homePara1: lbsText.gethomePara1(ourlang),
+    homePara2: lbsText.gethomePara2(ourlang),
+    homePara3: lbsText.gethomePara3(ourlang),
+    homePara4: lbsText.gethomePara4(ourlang),
+    pageLang: ourlang
   });
 
 });
