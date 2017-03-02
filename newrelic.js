@@ -18,7 +18,7 @@ exports.config = {
   /**
    * Your New Relic Agent Beta token.
    */
-  beta_token: 'b4c9dfcbd1dd2b746a6a2c97b0b12f722011575d',
+  beta_token: 'YH6ekFlZeX/e1dqkpSW57hBbguP+SADhp31XQXN2VA2GPn64wcbEGXDmjIG0JFuaE4Rkko8qJm5c9bd+c/jHpQ==',
   logging: {
     /**
      * Level at which to log. 'trace' is most useful to New Relic when diagnosing
