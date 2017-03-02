@@ -39,7 +39,7 @@ hbs.registerHelper('screamIt', (text) => {
 
 app.get('/', (req, res) => {
   res.render('home.hbs', {
-    nreum : newrelic.getBrowserTimingHeader(),
+    nreum : nr.getBrowserTimingHeader(),
     welcomeMessage: lbsText.getWelcome(ourlang),
     homePara1: lbsText.gethomePara1(ourlang),
     homePara2: lbsText.gethomePara2(ourlang),
@@ -63,6 +63,8 @@ app.get('/mens', (req, res) => {
 
 app.get('/ladies', (req, res) => {
   res.render('ladies.hbs', {
+        nreum : nr.getBrowserTimingHeader(),
+
     //pageTitle: 'About Page'
   });
 });
@@ -70,6 +72,8 @@ app.get('/ladies', (req, res) => {
 
 app.get('/sale', (req, res) => {
   res.render('sale.hbs', {
+        nreum : nr.getBrowserTimingHeader(),
+
     //pageTitle: 'About Page'
   });
 });
@@ -78,6 +82,8 @@ app.get('/sale', (req, res) => {
 
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
+        nreum : nr.getBrowserTimingHeader(),
+
     //pageTitle: 'About Page'
   });
 });
@@ -85,6 +91,7 @@ app.get('/about', (req, res) => {
 app.get('/en', (req, res) => {
   ourlang='en',
   res.render('home.hbs', {
+        nreum : nr.getBrowserTimingHeader(),
     welcomeMessage: lbsText.getWelcome(ourlang),
     homePara1: lbsText.gethomePara1(ourlang),
     homePara2: lbsText.gethomePara2(ourlang),
@@ -98,6 +105,8 @@ app.get('/en', (req, res) => {
 app.get('/it', (req, res) => {
   ourlang='it',
   res.render('home.hbs', {
+        nreum : nr.getBrowserTimingHeader(),
+
     welcomeMessage: lbsText.getWelcome(ourlang),
     homePara1: lbsText.gethomePara1(ourlang),
     homePara2: lbsText.gethomePara2(ourlang),
@@ -112,6 +121,8 @@ app.get('/it', (req, res) => {
 app.get('/de', (req, res) => {
   ourlang='de',
   res.render('home.hbs', {
+        nreum : nr.getBrowserTimingHeader(),
+
     welcomeMessage: lbsText.getWelcome(ourlang),
     homePara1: lbsText.gethomePara1(ourlang),
     homePara2: lbsText.gethomePara2(ourlang),
@@ -125,6 +136,8 @@ app.get('/de', (req, res) => {
 app.get('/fr', (req, res) => {
   ourlang='fr',
   res.render('home.hbs', {
+        nreum : nr.getBrowserTimingHeader(),
+
     welcomeMessage: lbsText.getWelcome(ourlang),
     homePara1: lbsText.gethomePara1(ourlang),
     homePara2: lbsText.gethomePara2(ourlang),
@@ -139,6 +152,8 @@ app.get('/fr', (req, res) => {
 app.get('/es', (req, res) => {
   ourlang='es',
   res.render('home.hbs', {
+        nreum : nr.getBrowserTimingHeader(),
+
     welcomeMessage: lbsText.getWelcome(ourlang),
     homePara1: lbsText.gethomePara1(ourlang),
     homePara2: lbsText.gethomePara2(ourlang),
@@ -156,6 +171,8 @@ app.get('/es', (req, res) => {
 
 app.get('/services', (req, res) => {
   res.render('services.hbs', {
+        nreum : nr.getBrowserTimingHeader(),
+
   //  pageTitle: 'Projectk'
   });
 });
@@ -163,6 +180,8 @@ app.get('/services', (req, res) => {
 // /bad - send back json with errorMessage
 app.get('/bad', (req, res) => {
   res.send({
+        nreum : nr.getBrowserTimingHeader(),
+
     errorMessage: 'Unable to handle request'
   });
 });
