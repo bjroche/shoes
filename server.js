@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 var ourlang ='en';
 var app = express();
 
-
+nreum : nr.getBrowserTimingHeader()
 
 hbs.registerPartials(__dirname + '/views/partials')
 app.set('view engine', 'hbs');
@@ -39,6 +39,7 @@ hbs.registerHelper('screamIt', (text) => {
 
 app.get('/', (req, res) => {
   res.render('home.hbs', {
+    nreum : newrelic.getBrowserTimingHeader(),
     welcomeMessage: lbsText.getWelcome(ourlang),
     homePara1: lbsText.gethomePara1(ourlang),
     homePara2: lbsText.gethomePara2(ourlang),
