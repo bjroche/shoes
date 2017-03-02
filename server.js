@@ -1,5 +1,5 @@
 const express = require('express');
-const nr = require('@newrelic/beta-agent')
+const nr = require('@newrelic/beta-agent')  
 const hbs = require('hbs');
 const fs = require('fs');
 const lbsConstants = require('./scarpa_const');
@@ -16,7 +16,7 @@ app.set('view engine', 'hbs');
 app.use((req, res, next) => {
   var now = new Date().toString();
   var log = `${now}: ${req.method} ${req.url}`;
-
+  app.locals.nreum = newrelic.getBrowserTimingHeader();
   //console.log(log);
   //fs.appendFileSync('server.log', log + '\n');
   next();
