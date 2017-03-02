@@ -10,11 +10,11 @@ exports.config = {
   /**
    * Array of application names.
    */
-  app_name: ['My Application'],
+  app_name: ['La Bella Scarpa Website'],
   /**
    * Your New Relic license key.
    */
-  license_key: 'license key here',
+  license_key: 'b4c9dfcbd1dd2b746a6a2c97b0b12f722011575d',
   /**
    * Your New Relic Agent Beta token.
    */
