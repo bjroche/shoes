@@ -107,6 +107,50 @@ app.get('/it', (req, res) => {
 });
 
 
+app.get('/de', (req, res) => {
+  ourlang='de',
+  res.render('home.hbs', {
+    welcomeMessage: lbsText.getWelcome(ourlang),
+    homePara1: lbsText.gethomePara1(ourlang),
+    homePara2: lbsText.gethomePara2(ourlang),
+    homePara3: lbsText.gethomePara3(ourlang),
+    homePara4: lbsText.gethomePara4(ourlang),
+    pageLang: ourlang
+  });
+
+});
+
+app.get('/fr', (req, res) => {
+  ourlang='fr',
+  res.render('home.hbs', {
+    welcomeMessage: lbsText.getWelcome(ourlang),
+    homePara1: lbsText.gethomePara1(ourlang),
+    homePara2: lbsText.gethomePara2(ourlang),
+    homePara3: lbsText.gethomePara3(ourlang),
+    homePara4: lbsText.gethomePara4(ourlang),
+    pageLang: ourlang
+  });
+
+});
+
+
+app.get('/es', (req, res) => {
+  ourlang='es',
+  res.render('home.hbs', {
+    welcomeMessage: lbsText.getWelcome(ourlang),
+    homePara1: lbsText.gethomePara1(ourlang),
+    homePara2: lbsText.gethomePara2(ourlang),
+    homePara3: lbsText.gethomePara3(ourlang),
+    homePara4: lbsText.gethomePara4(ourlang),
+    pageLang: ourlang
+  });
+
+});
+
+
+
+
+
 
 app.get('/services', (req, res) => {
   res.render('services.hbs', {
