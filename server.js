@@ -1,4 +1,5 @@
 const express = require('express');
+const nr = require('@newrelic/beta-agent')
 const hbs = require('hbs');
 const fs = require('fs');
 const lbsConstants = require('./scarpa_const');

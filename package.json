@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-   
+    "@newrelic/beta-agent": "^2.5.0-beta",
     "express": "^4.14.1",
     "hbs": "^4.0.0"
   }
